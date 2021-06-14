@@ -1,8 +1,8 @@
 const form_template = `
-<template>
-    <Input v-model="sampleForm.text" placeholder="サンプル" name="sample-input" type="text"></Input>
+<div>
+    <Input v-model="sampleForm.text" placeholder="Search" name="search-input" type="text"></Input>
     <p>{{ sampleForm.text }}</p>
-</template>
+</div>
 `
 
 const Form = {
