@@ -14,6 +14,11 @@ const router = VueRouter.createRouter({
             path: '/mysite/signin',
             component: Signin,
             props: true
+        },
+        {
+            path: '/mysite/about',
+            component: About,
+            props: true
         }
     ]
 })
