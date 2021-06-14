@@ -12,6 +12,7 @@ const input_template = `
 
 const Input = {
     name: "Input",
+    template: input_template,
     props: {
         modelValue: { type: String },
         value: { type: String, required: false },

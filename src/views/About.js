@@ -1,10 +1,26 @@
 const about_template = `
-<div class="center-block m-3">
-    <template v-for="(item, key) in cardList">
-        <Card :key="key" :item="item" />
-    </template>
+<div class="container-fluid">
+    <div class="row center-block m-3">
+        <template v-for="(item, key) in cardList">
+            <Card :key="key" :item="item" />
+        </template>
+    </div>
 </div>
 `
+
+const About = {
+    template: about_template,
+    name: About,
+    components: {
+        Card
+    },
+    setup() {
+        const cardList = [card1, card2, card3, card4]
+        return {
+            cardList
+        }
+    }
+}
 
 const card1 = {
     title: "Progressing",
@@ -32,17 +48,4 @@ const card4 = {
     content: "now is time",
     src: "https://s-yukisato.github.io/mysite/src/assets/business-woman-flow-chart.jpg",
     next: "/mysite/"
-}
-
-const About = {
-    components: {
-        Card
-    },
-    setup() {
-        const cardList = [card1, card2, card3, card4]
-        return {
-            cardList
-        }
-    },
-    template: about_template
 }
