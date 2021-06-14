@@ -11,6 +11,5 @@ const card_template = `
 
 const Card = {
   template: card_template,
-  name: Card,
   props: ['item', 'key'],
 }

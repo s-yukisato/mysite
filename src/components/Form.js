@@ -7,7 +7,6 @@ const form_template = `
 
 const Form = {
     template: form_template,
-    name: "Form",
     components: {
         Input
     },

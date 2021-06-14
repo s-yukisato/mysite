@@ -10,7 +10,6 @@ const about_template = `
 
 const About = {
     template: about_template,
-    name: About,
     components: {
         Card
     },

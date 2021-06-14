@@ -9,8 +9,8 @@ const home_template = `
 </div>
 `
 const Home = {
+    template: home_template,
     components: {
         Form
-    },
-    template: home_template,
+    }
 }
