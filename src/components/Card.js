@@ -1,9 +1,9 @@
 const card_template = `
 <div class="card" style="width: 18rem;">
-  <img :src="item.data.src" class="card-img-top" alt="...">
+  <img :src="item.src" class="card-img-top" alt="...">
   <div class="card-body">
-    <h3 class="text-white">{{ item.data.title }}</h3>
-    <p class="card-text bg-dark text-white">{{ item.data.content }}</p>
+    <h3 class="text-white">{{ item.title }}</h3>
+    <p class="card-text bg-dark text-white">{{ item.content }}</p>
   </div>
 </div>
 `
