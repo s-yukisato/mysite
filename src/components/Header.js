@@ -1,7 +1,7 @@
 const header_template = `
 <header class="bg-warning py-5">
     <div class="container px-4 px-lg-5">
-        <div class="small text-center text-muted">{{ title }}</div>
+        <div class="text-center text-muted">{{ title }}</div>
     </div>
 </header>
 `
