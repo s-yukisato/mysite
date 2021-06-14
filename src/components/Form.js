@@ -6,6 +6,9 @@ const form_template = `
 `
 
 const Form = {
+    components: {
+        Input
+    },
     setup() {
         const sampleForm = Vue.reactive({
             text: ""
