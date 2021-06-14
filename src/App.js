@@ -1,7 +1,6 @@
 const template = `
 <div>
     <Navi></Navi>
-    <Header :title="title"></Header>
     <router-view />
     <Footer></Footer>
 </div>
