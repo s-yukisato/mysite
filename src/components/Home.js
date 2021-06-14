@@ -4,7 +4,7 @@ const home_template = `
     <p>Thanks for coming!</p>
 </div>
 <div>
-    <img src="./src/assets/desk.jpg" class="img-fluid" alt="...">
+    <img src="../assets/desk.jpg" class="img-fluid" alt="...">
 </div>
 `
 const Home = {

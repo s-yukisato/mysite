@@ -2,8 +2,6 @@ const template = `
 <div>
     <Navi></Navi>
     <Header :title="title"></Header>
-    <router-link to="/"></router-link>
-    <router-link to="/signin">Sign in</router-link>
     <router-view />
     <Footer></Footer>
 </div>
@@ -20,6 +18,10 @@ const App = {
     },
     setup() {
         const title = Vue.ref("Top Page")
+        Vue.watch('$router', (to, from) => {
+            console.log(`画面遷移前のpath：${from}`)
+            console.log(`画面遷移後のpath：${to}`)
+        })
         return {
             title
         }
