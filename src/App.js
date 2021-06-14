@@ -18,7 +18,7 @@ const App = {
     },
     setup() {
         const title = Vue.ref("Top Page")
-        Vue.watch('$router', (to, from) => {
+        Vue.watch('$route', (to, from) => {
             console.log(`画面遷移前のpath：${from}`)
             console.log(`画面遷移後のpath：${to}`)
         })
