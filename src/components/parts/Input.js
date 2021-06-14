@@ -5,7 +5,7 @@ const input_template = `
     :name="name"
     :value="value"
     :placeholder="placeholder"
-    @input="updateValue"
+    :input="updateValue"
   />
 </template>
 `
@@ -13,6 +13,7 @@ const input_template = `
 const Input = {
     name: "Input",
     props: {
+        modelValue: { type: String },
         value: { type: String, required: false },
         type: { type: String, required: true },
         name: { type: String, required: true },
@@ -20,7 +21,7 @@ const Input = {
     },
     setup(_, context) {
         const updateValue = (e) => {
-            context.emit("input", e.target.value)
+            context.emit("update:modelValue", e.target.value)
         }
         return {
             updateValue

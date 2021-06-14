@@ -1,5 +1,5 @@
 const about_template = `
-<div class="center-block d-flex m-3">
+<div class="center-block m-3">
     <template v-for="(item, key) in cardList">
         <Card :key="key" :item="item" />
     </template>
