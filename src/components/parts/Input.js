@@ -5,7 +5,7 @@ const input_template = `
     :name="name"
     :value="value"
     :placeholder="placeholder"
-    :input="updateValue"
+    @input="updateValue"
   />
 
 `
