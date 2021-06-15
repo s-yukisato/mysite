@@ -5,7 +5,7 @@ const input_template = `
     :name="name"
     :value="value"
     :placeholder="placeholder"
-    :input="$emit('update:modelValue', $event.target.value)"
+    @input="$emit('update:modelValue', $event.target.value)"
   />
 `
 
