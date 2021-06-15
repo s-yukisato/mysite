@@ -6,7 +6,7 @@ const input_template = `
     :value="value"
     :placeholder="placeholder"
   />
-  <button @click="updateValue" class="btn btn-outline-success btn-xl disabled p-1 m-2">{{ btn-msg }}</button>
+  <button @click="updateValue" class="btn btn-outline-dark btn-xl p-1 m-2">{{ btnMsg }}</button>
 
 `
 
