@@ -1,5 +1,5 @@
 const input_template = `
-<template>
+
   <input
     :type="type"
     :name="name"
@@ -7,7 +7,7 @@ const input_template = `
     :placeholder="placeholder"
     :input="updateValue"
   />
-</template>
+
 `
 
 const Input = {

@@ -12,7 +12,7 @@ const Form = {
     },
     setup() {
         const sampleForm = Vue.reactive({
-            text: ""
+            text: "Search..."
         })
         return {
             sampleForm
