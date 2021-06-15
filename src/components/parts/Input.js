@@ -1,13 +1,14 @@
 const input_template = `
-
+<div class="form-floating mb-3">
   <input
+    class="form-control"
     :type="type"
     :name="name"
     :value="value"
     :placeholder="placeholder"
-    @input="updateValue"
+    @input="$emit('update:modelValue', $event.target.value)"
   />
-
+</div>
 `
 
 const Input = {
