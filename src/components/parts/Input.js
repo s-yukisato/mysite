@@ -5,8 +5,9 @@ const input_template = `
     :name="name"
     :value="value"
     :placeholder="placeholder"
-    @input="$emit('update:modelValue', $event.target.value)"
   />
+  <button @click="updateValue" class="btn btn-outline-success btn-xl disabled p-1 m-2">{{ btn-msg }}</button>
+
 `
 
 const Input = {
@@ -16,7 +17,8 @@ const Input = {
         value: { type: String, required: false },
         type: { type: String, required: true },
         name: { type: String, required: true },
-        placeholder: { type: String, required: false }
+        placeholder: { type: String, required: false },
+        btnMsg: { type: String, required: true }
     },
     setup(_, context) {
         const updateValue = (e) => {

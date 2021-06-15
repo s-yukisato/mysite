@@ -1,9 +1,8 @@
 const form_template = `
 <form>
     <div class="form-floating mb-2">
-        <Input v-model="sampleForm.text" placeholder="Search..." name="search-input" type="text"></Input>
+        <Input v-model="sampleForm.text" :btnMsg="inputList.btnMsg" :placeholder="inputList.placeholder" :name="inputList.name" :type="inputList.type"></Input>
         <p>{{ sampleForm.text }}</p>
-        <button class="btn btn-outline-warning btn-xl disabled p-1 m-2">検索</button>
     </div>
 </form>
 `
@@ -14,10 +13,17 @@ const Form = {
         Input
     },
     setup() {
+        const inputList = {
+            type: "text",
+            name: "search-input",
+            placeholder: "Search...",
+            btnMsg: "検索"
+        }
         const sampleForm = Vue.reactive({
             text: "Search..."
         })
         return {
+            inputList,
             sampleForm
         }
     }
