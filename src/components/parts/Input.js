@@ -1,29 +1,24 @@
 const input_template = `
-  <input
+<label for="id">{{ labelText }}</label>
+<input
     :type="type"
+    :id="id"
     :name="name"
-    :value="value"
+    :value="modelValue"
     :placeholder="placeholder"
-  />
-  <button @click="updateValue" class="btn btn-outline-dark btn-xl p-1 m-2">{{ btnMsg }}</button>
+    @input="$emit('update:modelValue', $event.target.value)"
+/>
 `
 
 const Input = {
     template: input_template,
     props: {
         modelValue: { type: String },
-        value: { type: String, required: false },
+        id: { type: String, required: true },
         type: { type: String, required: true },
         name: { type: String, required: true },
         placeholder: { type: String, required: false },
-        btnMsg: { type: String, required: true }
+        labelText: { type: String }
     },
-    setup(_, context) {
-        const updateValue = (e) => {
-            context.emit("update:modelValue", e.target.value)
-        }
-        return {
-            updateValue
-        }
-    },
+    emits: ['update:modelValue'],
 };

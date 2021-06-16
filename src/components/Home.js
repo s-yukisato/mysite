@@ -1,7 +1,6 @@
 const home_template = `
 <div class="bg-success text-center text-white p-3">
     <h1>Top of Page</h1>
-    <Form></Form>
     <p>Thanks for coming!</p>
 </div>
 <div>
@@ -10,7 +9,5 @@ const home_template = `
 `
 const Home = {
     template: home_template,
-    components: {
-        Form
-    }
+    components: {  }
 }

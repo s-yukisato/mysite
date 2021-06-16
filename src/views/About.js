@@ -1,9 +1,19 @@
 const about_template = `
-<div class="container-fluid">
-    <div class="row center-block m-3">
-        <template v-for="(item, key) in cardList">
-            <Card :key="key" :item="item" />
-        </template>
+<div class="container-fluid justfy-content-center p-3 m-3">
+    <div class="form-floating p-3 m-3">
+        <Input v-model="searchWord" id="search-card" type="text" name="search-input" labelText="Search"></Input>
+        <Checkbox
+            @checked="hasChecked"
+            name="search-check"
+            :options="options"
+        ></Checkbox>
+    </div>
+    <div class="container-fluid">
+        <div class="row center-block m-3">
+            <template v-for="(item, key) in search_result">
+                <Card :key="key" :item="item" />
+            </template>
+        </div>
     </div>
 </div>
 `
@@ -11,12 +21,40 @@ const about_template = `
 const About = {
     template: about_template,
     components: {
-        Card
+        Card,
+        Checkbox,
+        Input
     },
     setup() {
         const cardList = [card1, card2, card3, card4]
+        const searchWord = Vue.ref("")
+        const search_result = Vue.computed(() => {
+            let word = searchWord.value.toLocaleLowerCase()
+            if (searchWord.value === "") return cardList;
+            if (search_tag.value.includes("title") && search_tag.value.includes("content")) {
+                return cardList.filter((card) => card.title.toLocaleLowerCase().includes(word) || card.content.toLocaleLowerCase().includes(word));
+            } else if (search_tag.value.includes("title")) {
+                return cardList.filter((card) => card.title.toLocaleLowerCase().includes(word))
+            } else if (search_tag.value.includes("content")) {
+                return cardList.filter((card) => card.content.toLocaleLowerCase().includes(word))
+            };
+        });
+
+        const search_tag = Vue.ref([])
+        const options = [
+            { label: "タイトル", value: "title" },
+            { label: "内容", value: "content" },
+        ]
+        const hasChecked = (values) => {
+            search_tag.value = values
+        }
         return {
-            cardList
+            cardList,
+            searchWord,
+            search_result,
+            search_tag,
+            options,
+            hasChecked
         }
     }
 }
