@@ -1,6 +1,7 @@
 const input_template = `
 <label for="id">{{ labelText }}</label>
 <input
+    class="form-control"
     :type="type"
     :id="id"
     :name="name"

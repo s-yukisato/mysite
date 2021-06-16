@@ -1,6 +1,7 @@
 const about_template = `
-<div class="container-fluid justfy-content-center p-3 m-3">
-    <div class="form-floating p-3 m-3">
+<div class="container-fluid p-3 m-3 justify-content-center">
+    <h1 class="border">作品紹介</h1>
+    <div class="form-floating p-3 m-3 d-flex">
         <Input v-model="searchWord" id="search-card" type="text" name="search-input" labelText="Search"></Input>
         <Checkbox
             @checked="hasChecked"
