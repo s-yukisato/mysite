@@ -4,7 +4,7 @@ const card_template = `
   <div class="card-body">
     <h3><u>{{ item.title }}</u></h3>
     <p class="card-text">{{ item.content }}</p>
-    <a :href="item.next" class="btn btn-primary">詳しく見る</a>
+    <a :href="item.next" class="rounded-pill">詳しく見る</a>
   </div>
 </div>
 `

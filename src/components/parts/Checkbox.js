@@ -3,7 +3,6 @@ const checkbox_template = `
     <template v-for="(option, index) in options">
         <label :key="index">
             <input
-                class="form-control"
                 type="checkbox"
                 :name="name"
                 :value="option.value"
