@@ -7,6 +7,7 @@ const template = `
 `
 
 const App = {
+    template,
     components: {
         Navi,
         Header,
@@ -24,6 +25,5 @@ const App = {
         return {
             title
         }
-    },
-    template
+    }
 }

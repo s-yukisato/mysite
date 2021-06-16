@@ -1,5 +1,5 @@
 const card_template = `
-<div class="card col-xs-10 col-md-6 col-lg-4 m-3" :key="key" style="width: 18rem;">
+<div class="card col-xs-10 col-md-6 col-lg-4 col-xl-3 m-2" :key="key" style="width: 18rem;">
   <img :src="item.src" class="card-img-top" alt="...">
   <div class="card-body">
     <h3><u>{{ item.title }}</u></h3>

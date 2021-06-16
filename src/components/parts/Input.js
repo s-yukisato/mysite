@@ -1,5 +1,4 @@
 const input_template = `
-<label for="id">{{ labelText }}</label>
 <input
     class="form-control"
     :type="type"
@@ -9,6 +8,7 @@ const input_template = `
     :placeholder="placeholder"
     @input="$emit('update:modelValue', $event.target.value)"
 />
+<label for="id">{{ labelText }}</label>
 `
 
 const Input = {
