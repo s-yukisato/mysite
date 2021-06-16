@@ -1,10 +1,8 @@
 const form_template = `
-<form>
-    <div class="form-floating mb-2">
-        <Input v-model="sampleForm.text" :btnMsg="inputList.btnMsg" :placeholder="inputList.placeholder" :name="inputList.name" :type="inputList.type"></Input>
-        <p>{{ sampleForm.text }}</p>
-    </div>
-</form>
+<div class="form-floating mb-2">
+    <Input v-model="sampleForm.text" :btnMsg="inputList.btnMsg" placeholder="Search..." name="search" type="text"></Input>
+    <p>{{ sampleForm.text }}</p>
+</div>
 `
 
 const Form = {
