@@ -72,8 +72,8 @@ const card1 = {
   const card2 = {
     title: "グラフィックス",
     content: "コンピュータグラフィックスサンプル",
-    src: "https://s-yukisato.github.io/mysite/src/assets/cd.jpg",
-    nexxt: "https://s-yukisato.github.io/lesson7/land.html"
+    src: "https://s-yukisato.github.io/mysite/src/assets/cg.jpg",
+    next: "https://s-yukisato.github.io/lesson7/land.html"
   }
   
   const card3 = {
