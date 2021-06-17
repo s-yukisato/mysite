@@ -63,29 +63,29 @@ const About = {
 }
 
 const card1 = {
+    title: "計算シミュレーター",
+    content: "離散フーリエ変換のシミュレーターサンプル",
+    src: "https://s-yukisato.github.io/mysite/src/assets/simulator.png",
+    next: "https://s-yukisato.github.io/cnv/"
+  }
+  
+  const card2 = {
+    title: "グラフィックス",
+    content: "コンピュータグラフィックスサンプル",
+    src: "https://s-yukisato.github.io/mysite/src/assets/cd.jpg",
+    nexxt: "https://s-yukisato.github.io/lesson7/land.html"
+  }
+  
+  const card3 = {
     title: "Progressing",
-    content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    src: "https://s-yukisato.github.io/mysite/src/assets/sample.png",
-    next: "/mysite/"
-}
-
-const card2 = {
-    title: "Progressing",
-    content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-    src: "https://s-yukisato.github.io/mysite/src/assets/buy-online-black-friday.jpg",
-    nexxt: "/mysite/"
-}
-
-const card3 = {
-    title: "Progressing",
-    content: "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    content: "更新待ち",
     src: "https://s-yukisato.github.io/mysite/src/assets/social-media-on-cell-phone.jpg",
     next: "/mysite/"
-}
-
-const card4 = {
-    title: "働くとは",
-    content: "now is time",
+  }
+  
+  const card4 = {
+    title: "Todo",
+    content: "",
     src: "https://s-yukisato.github.io/mysite/src/assets/business-woman-flow-chart.jpg",
     next: "/mysite/"
-}
+  }
